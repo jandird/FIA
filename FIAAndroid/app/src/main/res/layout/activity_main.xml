@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.dalipjandir.fiaandroid.MainActivity">
+        tools:context="com.dalipjandir.fiaandroid.MainActivity" android:background="@android:color/background_dark">
 
     <TextView
             android:text="Flag Identification Application"
@@ -19,7 +19,7 @@
             android:layout_marginBottom="8dp" app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginLeft="8dp" android:layout_marginRight="8dp"
             app:layout_constraintHorizontal_bias="0.002" app:layout_constraintVertical_bias="0.0"
-    />
+            android:textColor="@android:color/background_light"/>
     <Button
             android:text="ID Flag"
             android:layout_width="300dp"
@@ -31,18 +31,23 @@
             app:layout_constraintRight_toRightOf="parent" tools:layout_constraintLeft_creator="1"
             app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="35dp" android:layout_marginRight="35dp"
-            app:layout_constraintVertical_bias="0.406" style="@style/Widget.AppCompat.Button"/>
+            app:layout_constraintVertical_bias="0.359" style="@style/Widget.AppCompat.Button"
+            android:background="@drawable/can" android:elevation="0dp" android:visibility="visible"
+            android:textColor="@android:color/black"/>
     <Button
             android:text="Results"
-            android:layout_height="50dp" tools:layout_editor_absoluteY="274dp"
-            tools:layout_editor_absoluteX="42dp" android:id="@+id/buttonResults" android:layout_width="300dp"/>
-    <Button
-            android:text="Tutorial"
-            android:layout_height="50dp" tools:layout_editor_absoluteY="405dp"
-            tools:layout_editor_absoluteX="42dp" android:id="@+id/buttonTutorial" android:layout_width="300dp"/>
+            android:layout_height="50dp" tools:layout_editor_absoluteY="267dp"
+            tools:layout_editor_absoluteX="42dp" android:id="@+id/buttonResults" android:layout_width="300dp"
+            android:background="@drawable/usa"/>
     <Button
             android:text="Most Searched"
-            android:layout_height="50dp" tools:layout_editor_absoluteY="340dp"
-            tools:layout_editor_absoluteX="42dp" android:id="@+id/button11" android:layout_width="300dp"/>
+            android:layout_height="50dp" tools:layout_editor_absoluteY="349dp"
+            tools:layout_editor_absoluteX="43dp" android:id="@+id/buttonMS" android:layout_width="300dp"
+            android:background="@drawable/kor"/>
+    <Button
+            android:text="Tutorial"
+            android:layout_height="50dp" tools:layout_editor_absoluteY="433dp"
+            tools:layout_editor_absoluteX="42dp" android:id="@+id/buttonTutorial" android:layout_width="300dp"
+            android:background="@drawable/gbr"/>
 
 </android.support.constraint.ConstraintLayout>
