@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.dalipjandir.fiaandroid.MainActivity" android:background="@drawable/aboutBack">
+        tools:context="com.dalipjandir.fiaandroid.MainActivity" android:background="@drawable/mainback">
 
     <TextView
             android:text="Flag Identification Application"
@@ -35,24 +35,29 @@
     <Button
             android:text="Results"
             android:layout_height="50dp"
-            tools:layout_editor_absoluteX="42dp" android:id="@+id/buttonResults" android:layout_width="300dp"
-            android:fontFamily="@font/Muli-SemiBold"
+            android:id="@+id/buttonResults" android:layout_width="300dp"
             android:background="@drawable/usa"
             app:layout_constraintTop_toBottomOf="@+id/buttonID"
             android:layout_margin="20dp"
-    />
+            android:layout_marginTop="20dp" android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"/>
     <Button
             android:text="Most Searched"
             android:layout_height="50dp"
-            tools:layout_editor_absoluteX="42dp" android:id="@+id/buttonMS" android:layout_width="300dp"
+            android:id="@+id/buttonMS" android:layout_width="300dp"
             android:background="@drawable/kor"
             android:layout_margin="20dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/buttonResults"/>
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/buttonResults"
+            android:layout_marginLeft="8dp" app:layout_constraintLeft_toLeftOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"/>
     <Button
             android:text="Tutorial"
             android:layout_height="50dp"
-            tools:layout_editor_absoluteX="42dp" android:id="@+id/buttonTutorial" android:layout_width="300dp"
+            android:id="@+id/buttonTutorial" android:layout_width="300dp"
             android:background="@drawable/gbr" android:layout_margin="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/buttonMS" android:layout_marginTop="73dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/buttonMS" android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp" app:layout_constraintLeft_toLeftOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
