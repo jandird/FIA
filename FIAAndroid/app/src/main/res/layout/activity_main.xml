@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,17 +10,18 @@
 
     <TextView
             android:text="Flag Identification Application"
-            android:layout_width="365dp"
-            android:layout_height="140dp" android:id="@+id/title" android:visibility="visible"
-            android:textSize="50sp" android:fontFamily="cursive" android:textAlignment="center"
+            android:layout_width="364dp"
+            android:layout_height="214dp" android:id="@+id/title" android:visibility="visible"
+            android:textSize="60sp" android:fontFamily="cursive" android:textAlignment="center"
             tools:layout_constraintTop_creator="1"
             tools:layout_constraintRight_creator="1" tools:layout_constraintBottom_creator="1"
             android:layout_margin="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@android:color/background_light"/>
+            android:textColor="@android:color/background_light" android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"/>
     <Button
-            android:text="ID Flag"
             android:layout_width="300dp"
             android:layout_height="50dp" android:id="@+id/buttonID" app:layout_anchor="@+id/title"
             app:layout_anchorGravity="center_vertical|center_horizontal"
@@ -29,11 +31,10 @@
             app:layout_constraintRight_toRightOf="parent" tools:layout_constraintLeft_creator="1"
             app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="35dp" android:layout_marginRight="35dp"
-            app:layout_constraintVertical_bias="0.382" style="@style/Widget.AppCompat.Button"
+            app:layout_constraintVertical_bias="0.448" style="@style/Widget.AppCompat.Button"
             android:background="@drawable/can" android:visibility="visible" android:alpha="100"
-            android:textColor="@android:color/black" android:layout_marginTop="0dp" android:fontFamily="Muli-Bold"/>
+            android:textColor="@android:color/black" android:layout_marginTop="0dp"/>
     <Button
-            android:text="Results"
             android:layout_height="50dp"
             android:id="@+id/buttonResults" android:layout_width="300dp"
             android:background="@drawable/usa"
@@ -41,9 +42,8 @@
             android:layout_margin="20dp"
             android:layout_marginTop="20dp" android:layout_marginLeft="8dp"
             app:layout_constraintLeft_toLeftOf="parent" android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintRight_toRightOf="parent" android:textSize="40sp"/>
     <Button
-            android:text="Most Searched"
             android:layout_height="50dp"
             android:id="@+id/buttonMS" android:layout_width="300dp"
             android:background="@drawable/kor"
@@ -52,7 +52,6 @@
             android:layout_marginLeft="8dp" app:layout_constraintLeft_toLeftOf="parent" android:layout_marginRight="8dp"
             app:layout_constraintRight_toRightOf="parent"/>
     <Button
-            android:text="Tutorial"
             android:layout_height="50dp"
             android:id="@+id/buttonTutorial" android:layout_width="300dp"
             android:background="@drawable/gbr" android:layout_margin="20dp"
