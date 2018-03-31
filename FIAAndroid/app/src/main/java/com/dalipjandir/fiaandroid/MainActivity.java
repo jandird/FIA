@@ -45,9 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         title.setTypeface(titleTF);
     }
 
-<<<<<<< HEAD
-}
-=======
     @Override
     public void onClick (View v){
         if (v == buttonID){
@@ -63,7 +60,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             System.out.println("buttonTutorial");
         }
     }
-
-
 }
->>>>>>> 19602ea04ebb76d7a852824793f69aa289143f96
