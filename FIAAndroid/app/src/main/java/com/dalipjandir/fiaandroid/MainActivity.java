@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, ResultsActivity.class));
         }
         if (v == buttonMS){
-            System.out.println("buttonMS");
+            startActivity(new Intent(this, MostSearchedActivity.class));
         }
         if (v == buttonTutorial){
             System.out.println("buttonTutorial");
