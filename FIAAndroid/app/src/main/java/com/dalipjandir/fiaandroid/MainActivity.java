@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, UploadActivity.class));
         }
         if (v == buttonResults){
-            System.out.println("buttonResults");
+            startActivity(new Intent(this, ResultsActivity.class));
         }
         if (v == buttonMS){
             System.out.println("buttonMS");
