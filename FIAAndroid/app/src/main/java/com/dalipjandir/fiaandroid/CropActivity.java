@@ -29,4 +29,15 @@ public class CropActivity extends AppCompatActivity {
 
         startActivityForResult(CropIntent, REQUEST_CROP_ICON);
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CROP_ICON) {
+            try {
+                //InputStream inputStream = context.getContentResolver().openInputStream(data.getData());
+                ViewController.runFinalImage(data.getData());
+                startActivity(new Intent(this, CropActivity.class));
+            } catch (Exception e) {e.printStackTrace();}
+        }
+    }
 }
