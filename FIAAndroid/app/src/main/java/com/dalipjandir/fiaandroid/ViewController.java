@@ -15,8 +15,8 @@ public class ViewController {
         return uncroppedImage;
     }
 
-    public static void giveCroppedImage(){
-
+    public static void runFinalImage(Uri image){
+        croppedImage = image;
     }
 
 }
