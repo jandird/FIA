@@ -15,7 +15,6 @@ public class UploadActivity extends AppCompatActivity {
     public static final int PICK_IMAGE = 1;
 
     Context context;
-    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,6 @@ public class UploadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_upload);
 
         context = this;
-        imageView = (ImageView) findViewById(R.id.imageView);
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -36,7 +34,7 @@ public class UploadActivity extends AppCompatActivity {
         if (requestCode == PICK_IMAGE) {
             try {
                 //InputStream inputStream = context.getContentResolver().openInputStream(data.getData());
-                ViewController.sendUncroppedImage(data.getData());
+                ViewController.setUncroppedImage(data.getData());
                 startActivity(new Intent(this, CropActivity.class));
             } catch (Exception e) {e.printStackTrace();}
         }
