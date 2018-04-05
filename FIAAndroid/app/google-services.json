@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1061826788501",
+    "firebase_url": "https://fiaandroid-60cbb.firebaseio.com",
+    "project_id": "fiaandroid-60cbb",
+    "storage_bucket": "fiaandroid-60cbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061826788501:android:56e79e7a24df7714",
+        "android_client_info": {
+          "package_name": "com.dalipjandir.fiaandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061826788501-4jdthem51bb8820n1ca71sjjvgue0h7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvvtAcuY1ZLjaALgpQDEM3pck7wWJEZw8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
