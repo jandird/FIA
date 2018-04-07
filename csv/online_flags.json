@@ -1,0 +1,974 @@
+{
+  "Countries":{
+    "Andorra": {
+      "Weight": "0",
+      "Capital": "Andorra le Vella",
+      "Wiki": "https://en.wikipedia.org/wiki/Andorra"
+    },
+    "The United Arab Emirates": {
+      "Weight": "0",
+      "Capital": "Abu Dhabi",
+      "Wiki": "https://en.wikipedia.org/wiki/United_Arab_Emirates"
+    },
+    "Afghanistan":{
+      "Weight": "0",
+      "Capital": "Kabul",
+      "Wiki": "https://en.wikipedia.org/wiki/Afghanistan"
+    },
+    "Antigua and Barbuda":{
+      "Weight": "0","Flag": "flags-normal/ag.png",
+      "Capital": "St. John's",
+      "Wiki": "https://en.wikipedia.org/wiki/Antigua_and_Barbuda"
+    },
+    "Albania":{
+      "Weight": "0",
+      "Capital": "Tirana",
+      "Wiki": "https://en.wikipedia.org/wiki/Albania"
+    },
+  "Armenia":{
+    "Weight": "0",
+    "Capital": "Yerevan",
+    "Wiki": "https://en.wikipedia.org/wiki/Armenia"
+  },
+  "Angola":{
+    "Weight": "0",
+    "Capital": "Luanda",
+    "Wiki": "https://en.wikipedia.org/wiki/Angola"
+  },
+  "Argentina":{
+    "Weight": "0",
+    "Capital": "Buenos Aires",
+    "Wiki": "https://en.wikipedia.org/wiki/Argentina"
+  },
+  "Austria":{
+    "Weight": "0",
+    "Capital": "Vienna",
+    "Wiki": "https://en.wikipedia.org/wiki/Austria"
+  },
+  "Australia":{
+    "Weight": "0",
+    "Capital": "Canberra",
+    "Wiki": "https://en.wikipedia.org/wiki/Australia"
+  },
+  "Azerbaijan":{
+    "Weight": "0",
+    "Capital": "Baku",
+    "Wiki": "https://en.wikipedia.org/wiki/Azerbaijan"
+  },
+  "Bosnia and Herzegovina":{
+    "Weight": "0",
+    "Capital": "Sarajevo",
+    "Wiki": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina"
+  },
+  "Barbados":{
+    "Weight": "0",
+    "Capital": "Bridgetown",
+    "Wiki": "https://en.wikipedia.org/wiki/Barbados" 
+  },
+  "Bangladesh":{
+    "Weight": "0",
+    "Capital": "Dhaka",
+    "Wiki": "https://en.wikipedia.org/wiki/Bangladesh"
+  },
+  "Belgium":{
+    "Weight": "0",
+    "Capital": "Brussels",
+    "Wiki": "https://en.wikipedia.org/wiki/Belgium" 
+  },
+  "Burkina Faso":{
+    "Weight": "0",
+    "Capital": "Ouagadougou",
+    "Wiki": "https://en.wikipedia.org/wiki/Burkina_Faso" 
+  },
+  "Bulgaria":{
+    "Weight": "0",
+    "Capital": "Sofia",
+    "Wiki": "https://en.wikipedia.org/wiki/Bulgaria" 
+  },
+  "Bahrain":{
+    "Weight": "0",
+    "Capital": "Manama",
+    "Wiki": "https://en.wikipedia.org/wiki/Bahrain" 
+  },
+  "Burundi":{
+    "Weight": "0",
+    "Capital": "Bujumbura",
+    "Wiki": "https://en.wikipedia.org/wiki/Burundi"
+  },
+  "Benin":{
+    "Weight": "0",
+    "Capital": "Porto-Novo",
+    "Wiki": "https://en.wikipedia.org/wiki/Benin" 
+  },
+  "Brunei":{
+    "Weight": "0",
+    "Capital": "Bandar Seri Begawan",
+    "Wiki": "https://en.wikipedia.org/wiki/Brunei" 
+  },
+  "Bolivia":{
+    "Weight": "0",
+    "Capital": "Sucre",
+    "Wiki": "https://en.wikipedia.org/wiki/Bolivia" 
+  },
+  "Brazil":{
+    "Weight": "0",
+    "Capital": "Brasilia",
+    "Wiki": "https://en.wikipedia.org/wiki/Brazil" 
+  },
+  "The Bahamas":{
+    "Weight": "0",
+    "Capital": "Nassau",
+    "Wiki": "https://en.wikipedia.org/wiki/The_Bahamas" 
+  },
+  "Bhutan":{
+    "Weight": "0",
+    "Capital": "Thimphu",
+    "Wiki": "https://en.wikipedia.org/wiki/Bhutan" 
+  },
+  "Botswana":{
+    "Weight": "0",
+    "Capital": "Gaborone",
+    "Wiki": "https://en.wikipedia.org/wiki/Botswana" 
+  },
+  "Belarus":{
+    "Weight": "0",
+    "Capital": "Minsk",
+    "Wiki": "https://en.wikipedia.org/wiki/Belarus" 
+  },
+  "Belize":{
+    "Weight": "0",
+    "Capital": "Belmopan",
+    "Wiki": "https://en.wikipedia.org/wiki/Belize" 
+  },
+  "Canada":{
+    "Weight": "0",
+    "Capital": "Ottawa",
+    "Wiki": "https://en.wikipedia.org/wiki/Canada" 
+  },
+  "The Democratic Republic of Congo":{
+    "Weight": "0",
+    "Capital": "Kinshasa",
+    "Wiki": "https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo" 
+  },
+  "The Central African Republic":{
+    "Weight": "0",
+    "Capital": "Bangui",
+    "Wiki": "https://en.wikipedia.org/wiki/Central_African_Republic" 
+  },
+  "The Republic of Congo":{
+    "Weight": "0",
+    "Capital": "Brazzaville",
+    "Wiki": "https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_the_Congo" 
+  },
+  "Switzerland":{
+    "Weight": "0",
+    "Capital": "Bern",
+    "Wiki": "https://en.wikipedia.org/wiki/Switzerland" 
+  },
+  "Cote d'Ivoire":{
+    "Weight": "0",
+    "Capital": "Yamoussoukro",
+    "Wiki": "https://en.wikipedia.org/wiki/Ivory_Coast" 
+  },
+  "Chile":{
+    "Weight": "0",
+    "Capital": "Santiago",
+    "Wiki": "https://en.wikipedia.org/wiki/Chile" 
+  },
+  "Cameroon":{
+    "Weight": "0",
+    "Capital": "Yaound�",
+    "Wiki": "https://en.wikipedia.org/wiki/Cameroon" 
+  },
+  "The People's Republic of China":{
+    "Weight": "0",
+    "Capital": "Beijing",
+    "Wiki": "https://en.wikipedia.org/wiki/China" 
+  },
+  "Colombia":{
+    "Weight": "0",
+    "Capital": "Bogot�",
+    "Wiki": "https://en.wikipedia.org/wiki/Colombia" 
+  },
+  "Costa Rica":{
+    "Weight": "0",
+    "Capital": "San Jos�",
+    "Wiki": "https://en.wikipedia.org/wiki/Costa_Rica" 
+  },
+  "Cuba":{
+    "Weight": "0",
+    "Capital": "Havana",
+    "Wiki": "https://en.wikipedia.org/wiki/Cuba"
+  },
+  "Cape Verde":{
+    "Weight": "0",
+    "Capital": "Praia",
+    "Wiki": "https://en.wikipedia.org/wiki/Cape_Verde" 
+  },
+  "Cyprus":{
+    "Weight": "0",
+    "Capital": "Nicosia",
+    "Wiki": "https://en.wikipedia.org/wiki/Cyprus" 
+  },
+  "The Czech Republic":{
+    "Weight": "0",
+    "Capital": "Prague",
+    "Wiki": "https://en.wikipedia.org/wiki/Czech_Republic" 
+  },
+  "Germany":{
+    "Weight": "0",
+    "Capital": "Berlin",
+    "Wiki": "https://en.wikipedia.org/wiki/Germany" 
+  },
+  "Djibouti":{
+    "Weight": "0",
+    "Capital": "Djibouti",
+    "Wiki": "https://en.wikipedia.org/wiki/Djibouti" 
+  },
+  "Denmark":{
+    "Weight": "0",
+    "Capital": "Copenhagen",
+    "Wiki": "https://en.wikipedia.org/wiki/Denmark" 
+  },
+  "Dominica":{
+    "Weight": "0",
+    "Capital": "Roseau",
+    "Wiki": "https://en.wikipedia.org/wiki/Dominica" 
+  },
+  "The Dominican Republic":{
+    "Weight": "0",
+    "Capital": "Santo Domingo",
+    "Wiki": "https://en.wikipedia.org/wiki/Dominican_Republic" 
+  },
+  "Algeria":{
+    "Weight": "0",
+    "Capital": "Algiers",
+    "Wiki": "https://en.wikipedia.org/wiki/Algeria" 
+  },
+  "Ecuador":{
+    "Weight": "0",
+    "Capital": "Quito",
+    "Wiki": "https://en.wikipedia.org/wiki/Ecuador" 
+  },
+  "Estonia":{
+    "Weight": "0",
+    "Capital": "Tallinn",
+    "Wiki": "https://en.wikipedia.org/wiki/Estonia" 
+  },
+  "Egypt":{
+    "Weight": "0",
+    "Capital": "Cairo",
+    "Wiki": "https://en.wikipedia.org/wiki/Egypt" 
+  },
+  "Western Sahara":{
+    "Weight": "0",
+    "Capital": "Laayoune",
+    "Wiki": "https://en.wikipedia.org/wiki/Western_Sahara" 
+  },
+  "Eritrea":{
+    "Weight": "0",
+    "Capital": "Asmara",
+    "Wiki": "https://en.wikipedia.org/wiki/Eritrea" 
+  },
+  "Spain":{
+    "Weight": "0",
+    "Capital": "Madrid",
+    "Wiki": "https://en.wikipedia.org/wiki/Spain" 
+  },
+  "Ethiopia":{
+    "Weight": "0",
+    "Capital": "Addis Ababa",
+    "Wiki": "https://en.wikipedia.org/wiki/Ethiopia" 
+  },
+  "Finland":{
+    "Weight": "0",
+    "Capital": "Helsinki",
+    "Wiki": "https://en.wikipedia.org/wiki/Finland" 
+  },
+  "Fiji":{
+    "Weight": "0",
+    "Capital": "Suva",
+    "Wiki": "https://en.wikipedia.org/wiki/Fiji" 
+  },
+  "Micronesia":{
+    "Weight": "0",
+    "Capital": "Palikir",
+    "Wiki": "https://en.wikipedia.org/wiki/Federated_States_of_Micronesia" 
+  },
+  "France":{
+    "Weight": "0",
+    "Capital": "Paris",
+    "Wiki": "https://en.wikipedia.org/wiki/France" 
+  },
+  "Gabon":{
+    "Weight": "0",
+    "Capital": "Libreville",
+    "Wiki": "https://en.wikipedia.org/wiki/Gabon" 
+  },
+  "The United Kingdom":{
+    "Weight": "0",
+    "Capital": "London",
+    "Wiki": "https://en.wikipedia.org/wiki/Great_Britain" 
+  },
+  "Grenada":{
+    "Weight": "0",
+    "Capital": "St. George's",
+    "Wiki": "https://en.wikipedia.org/wiki/Grenada" 
+  },
+  "Georgia":{
+    "Weight": "0",
+    "Capital": "Tbilisi",
+    "Wiki": "https://en.wikipedia.org/wiki/Georgia_(country)"
+  },
+  "Ghana":{
+    "Weight": "0",
+    "Capital": "Accra",
+    "Wiki": "https://en.wikipedia.org/wiki/Ghana"
+  },
+  "The Gambia":{
+    "Weight": "0",
+    "Capital": "Banjul",
+    "Wiki": "https://en.wikipedia.org/wiki/The_Gambia"
+  },
+  "Guinea":{
+    "Weight": "0",
+    "Capital": "Conakry",
+    "Wiki": "https://en.wikipedia.org/wiki/Guinea"
+  },
+  "Equatorial Guinea":{
+    "Weight": "0",
+    "Capital": "Malabo",
+    "Wiki": "https://en.wikipedia.org/wiki/Equatorial_Guinea"
+  },
+  "Greece":{
+    "Weight": "0",
+    "Capital": "Athens",
+    "Wiki": "https://en.wikipedia.org/wiki/Greece"
+  },
+  "Guatemala":{
+    "Weight": "0",
+    "Capital": "Guatemala City",
+    "Wiki": "https://en.wikipedia.org/wiki/Guatemala"
+  },
+  "Guinea-Bissau":{
+    "Weight": "0",
+    "Capital": "Bissau",
+    "Wiki": "https://en.wikipedia.org/wiki/Guinea-Bissau"
+  },
+  "Guyana":{
+    "Weight": "0",
+    "Capital": "Georgetown",
+    "Wiki": "https://en.wikipedia.org/wiki/Guyana"
+  },
+  "Honduras":{
+    "Weight": "0",
+    "Capital": "Tegucigalpa",
+    "Wiki": "https://en.wikipedia.org/wiki/Honduras"
+  },
+  "Croatia":{
+    "Weight": "0",
+    "Capital": "Zagreb",
+    "Wiki": "https://en.wikipedia.org/wiki/Croatia"
+  },
+  "Haiti":{
+    "Weight": "0",
+    "Capital": "Port-au-Prince",
+    "Wiki": "https://en.wikipedia.org/wiki/Haiti"
+  },
+  "Hungary":{
+    "Weight": "0",
+    "Capital": "Budapest",
+    "Wiki": "https://en.wikipedia.org/wiki/Hungary"
+  },
+  "Indonesia":{
+    "Weight": "0",
+    "Capital": "Jakarta",
+    "Wiki": "https://en.wikipedia.org/wiki/Indonesia"
+  },
+  "Ireland":{
+    "Weight": "0",
+    "Capital": "Dublin",
+    "Wiki": "https://en.wikipedia.org/wiki/Ireland"
+  },
+  "Israel":{
+    "Weight": "0",
+    "Capital": "Jerusalem",
+    "Wiki": "https://en.wikipedia.org/wiki/Israel"
+  },
+  "India":{
+    "Weight": "0",
+    "Capital": "New Delhi",
+    "Wiki": "https://en.wikipedia.org/wiki/India"
+  },
+  "Iraq":{
+    "Weight": "0",
+    "Capital": "Baghdad",
+    "Wiki": "https://en.wikipedia.org/wiki/Iraq"
+  },
+  "Iran":{
+    "Weight": "0",
+    "Capital": "Tehran",
+    "Wiki": "https://en.wikipedia.org/wiki/Iran"
+  },
+  "Iceland":{
+    "Weight": "0",
+    "Capital": "Reykjav�k",
+    "Wiki": "https://en.wikipedia.org/wiki/Iceland"
+  },
+  "Italy":{
+    "Weight": "0",
+    "Capital": "Rome",
+    "Wiki": "https://en.wikipedia.org/wiki/Italy"
+  },
+  "Jamaica":{
+    "Weight": "0",
+    "Capital": "Kingston",
+    "Wiki": "https://en.wikipedia.org/wiki/Jamaica"
+  },
+  "Jordan":{
+    "Weight": "0",
+    "Capital": "Amman",
+    "Wiki": "https://en.wikipedia.org/wiki/Jordan"
+  },
+  "Japan":{
+    "Weight": "0",
+    "Capital": "Tokyo",
+    "Wiki": "https://en.wikipedia.org/wiki/Japan"
+  },
+  "Kenya":{
+    "Weight": "0",
+    "Capital": "Nairobi",
+    "Wiki": "https://en.wikipedia.org/wiki/Kenya"
+  },
+  "Kyrgyzstan":{
+    "Weight": "0",
+    "Capital": "Bishkek",
+    "Wiki": "https://en.wikipedia.org/wiki/Kyrgyzstan"
+  },
+  "Cambodia":{
+    "Weight": "0",
+    "Capital": "Phnom Penh",
+    "Wiki": "https://en.wikipedia.org/wiki/Cambodia"
+  },
+  "Kiribati":{
+    "Weight": "0",
+    "Capital": "South Tarawa",
+    "Wiki": "https://en.wikipedia.org/wiki/Kiribati"
+  },
+  "The Comoros":{
+    "Weight": "0",
+    "Capital": "Moroni",
+    "Wiki": "https://en.wikipedia.org/wiki/Comoros"
+  },
+  "Saint Kitts and Nevis":{
+    "Weight": "0",
+    "Capital": "Basseterre",
+    "Wiki": "https://en.wikipedia.org/wiki/Saint_Kitts_and_Nevis"
+  },
+  "North Korea":{
+    "Weight": "0",
+    "Capital": "Pyongyang",
+    "Wiki": "https://en.wikipedia.org/wiki/North_Korea"
+  },
+  "South Korea":{
+    "Weight": "0",
+    "Capital": "Seoul",
+    "Wiki": "https://en.wikipedia.org/wiki/South_Korea"
+  },
+  "Kosovo":{
+    "Weight": "0",
+    "Capital": "Pristina",
+    "Wiki": "https://en.wikipedia.org/wiki/Kosovo"
+  },
+  "Kuwait":{
+    "Weight": "0",
+    "Capital": "Kuwait City",
+    "Wiki": "https://en.wikipedia.org/wiki/Kuwait"
+  },
+  "Kazakhstan":{
+    "Weight": "0",
+    "Capital": "Astana",
+    "Wiki": "https://en.wikipedia.org/wiki/Kazakhstan"
+  },
+  "Laos":{
+    "Weight": "0",
+    "Capital": "Vientiane",
+    "Wiki": "https://en.wikipedia.org/wiki/Laos"
+  },
+  "Lebanon":{
+    "Weight": "0",
+    "Capital": "Beirut",
+    "Wiki": "https://en.wikipedia.org/wiki/Lebanon"
+  },
+  "Saint Lucia":{
+    "Weight": "0",
+    "Capital": "Castries",
+    "Wiki": "https://en.wikipedia.org/wiki/Saint_Lucia"
+  },
+  "Liechtenstein":{
+    "Weight": "0",
+    "Capital": "Vaduz",
+    "Wiki": "https://en.wikipedia.org/wiki/Liechtenstein"
+  },
+  "Sri Lanka":{
+    "Weight": "0",
+    "Capital": "Colombo",
+    "Wiki": "https://en.wikipedia.org/wiki/Sri_Lanka"
+  },
+  "Liberia":{
+    "Weight": "0",
+    "Capital": "Monrovia",
+    "Wiki": "https://en.wikipedia.org/wiki/Liberia"
+  },
+  "Lesotho":{
+    "Weight": "0",
+    "Capital": "Maseru",
+    "Wiki": "https://en.wikipedia.org/wiki/Lesotho"
+  },
+  "Lithuania":{
+    "Weight": "0",
+    "Capital": "Vilnius",
+    "Wiki": "https://en.wikipedia.org/wiki/Lithuania"
+  },
+  "Sierra Leone":{
+    "Weight": "0",
+    "Capital": "Freetown",
+    "Wiki": "https://en.wikipedia.org/wiki/Sierra_Leone"
+  },
+  "Latvia":{
+    "Weight": "0",
+    "Capital": "Riga",
+    "Wiki": "https://en.wikipedia.org/wiki/Latvia"
+  },
+  "Libya":{
+    "Weight": "0",
+    "Capital": "Tripoli",
+    "Wiki": "https://en.wikipedia.org/wiki/Libya"
+  },
+  "Morocco":{
+    "Weight": "0",
+    "Capital": "Rabat",
+    "Wiki": "https://en.wikipedia.org/wiki/Morocco"
+  },
+  "Monaco":{
+    "Weight": "0",
+    "Capital": "Monaco",
+    "Wiki": "https://en.wikipedia.org/wiki/Monaco"
+  },
+  "Moldova":{
+    "Weight": "0",
+    "Capital": "Chisinau",
+    "Wiki": "https://en.wikipedia.org/wiki/Moldova"
+  },
+  "Montenegro":{
+    "Weight": "0",
+    "Capital": "Rodgorica",
+    "Wiki": "https://en.wikipedia.org/wiki/Montenegro"
+  },
+  "Madagascar":{
+    "Weight": "0",
+    "Capital": "Antananarivo",
+    "Wiki": "https://en.wikipedia.org/wiki/Madagascar"
+  },
+  "The Marshall Islands":{
+    "Weight": "0",
+    "Capital": "Majuro",
+    "Wiki": "https://en.wikipedia.org/wiki/Marshall_Islands"
+  },
+  "Macedonia":{
+    "Weight": "0",
+    "Capital": "Skopje",
+    "Wiki": "https://en.wikipedia.org/wiki/Republic_of_Macedonia"
+  },
+  "Mali":{
+    "Weight": "0",
+    "Capital": "Bamako",
+    "Wiki": "https://en.wikipedia.org/wiki/Mali"
+  },
+  "Myanmar":{
+    "Weight": "0",
+    "Capital": "Naypyidaw",
+    "Wiki": "https://en.wikipedia.org/wiki/Naypidaw"
+  },
+  "Mongolia":{
+    "Weight": "0",
+    "Capital": "Ulaanbaatar",
+    "Wiki": "https://en.wikipedia.org/wiki/Mongolia"
+  },
+  "Mauritania":{
+    "Weight": "0",
+    "Capital": "Nouakchott",
+    "Wiki": "https://en.wikipedia.org/wiki/Mauritania"
+  },
+  "Malta":{
+    "Weight": "0",
+    "Capital": "Valletta",
+    "Wiki": "https://en.wikipedia.org/wiki/Malta"
+  },
+  "Mauritius":{
+    "Weight": "0",
+    "Capital": "Port Louis",
+    "Wiki": "https://en.wikipedia.org/wiki/Mauritius"
+  },
+  "Maldives":{
+    "Weight": "0",
+    "Capital": "Mal�",
+    "Wiki": "https://en.wikipedia.org/wiki/Maldives"
+  },
+  "Malawi":{
+    "Weight": "0",
+    "Capital": "Lilongwe",
+    "Wiki": "https://en.wikipedia.org/wiki/Malawi"
+  },
+  "Mexico":{
+    "Weight": "0",
+    "Capital": "Mexcio City",
+    "Wiki": "https://en.wikipedia.org/wiki/Mexico"
+  },
+  "Malaysia":{
+    "Weight": "0",
+    "Capital": "Kuala Lumpur",
+    "Wiki": "https://en.wikipedia.org/wiki/Malaysia"
+  },
+  "Mozambique":{
+    "Weight": "0",
+    "Capital": "Maputo",
+    "Wiki": "https://en.wikipedia.org/wiki/Mozambique"
+  },
+  "Namibia":{
+    "Weight": "0",
+    "Capital": "Windhoek",
+    "Wiki": "https://en.wikipedia.org/wiki/Namibia"
+  },
+  "Niger":{
+    "Weight": "0",
+    "Capital": "Niamey",
+    "Wiki": "https://en.wikipedia.org/wiki/Niger"
+  },
+  "Nigeria":{
+    "Weight": "0",
+    "Capital": "Abuja",
+    "Wiki": "https://en.wikipedia.org/wiki/Nigeria"
+  },
+  "Nicaragua":{
+    "Weight": "0",
+    "Capital": "Managua",
+    "Wiki": "https://en.wikipedia.org/wiki/Nicaragua"
+  },
+  "Netherlands":{
+    "Weight": "0",
+    "Capital": "Amsterdam",
+    "Wiki": "https://en.wikipedia.org/wiki/Netherlands"
+  },
+  "Norway":{
+    "Weight": "0",
+    "Capital": "Oslo",
+    "Wiki": "https://en.wikipedia.org/wiki/Norway"
+  },
+  "Nepal":{
+    "Weight": "0",
+    "Capital": "Kathmandu",
+    "Wiki": "https://en.wikipedia.org/wiki/Nepal"
+  },
+  "Nauru":{
+    "Weight": "0",
+    "Capital": "Yaren District",
+    "Wiki": "https://en.wikipedia.org/wiki/Nauru"
+  },
+  "New Zealand":{
+    "Weight": "0",
+    "Capital": "Wellington",
+    "Wiki": "https://en.wikipedia.org/wiki/New_Zealand"
+  },
+  "Oman":{
+    "Weight": "0",
+    "Capital": "Muscat",
+    "Wiki": "https://en.wikipedia.org/wiki/Oman"
+  },
+  "Panama":{
+    "Weight": "0",
+    "Capital": "Panama City",
+    "Wiki": "https://en.wikipedia.org/wiki/Panama"
+  },
+  "Peru":{
+    "Weight": "0",
+    "Capital": "Lima",
+    "Wiki": "https://en.wikipedia.org/wiki/Peru"
+  },
+  "Papua New Guinea":{
+    "Weight": "0",
+    "Capital": "Port Moresby",
+    "Wiki": "https://en.wikipedia.org/wiki/Papua_New_Guinea"
+  },
+  "The Philippines":{
+    "Weight": "0",
+    "Capital": "Manila",
+    "Wiki": "https://en.wikipedia.org/wiki/Philippines"
+  },
+  "Pakistan":{
+    "Weight": "0",
+    "Capital": "Islamabad",
+    "Wiki": "https://en.wikipedia.org/wiki/Pakistan"
+  },
+  "Poland":{
+    "Weight": "0",
+    "Capital": "Warsaw",
+    "Wiki": "https://en.wikipedia.org/wiki/Poland"
+  },
+  "Portugal":{
+    "Weight": "0",
+    "Capital": "Lisbon",
+    "Wiki": "https://en.wikipedia.org/wiki/Portugal"
+  },
+  "Palau":{
+    "Weight": "0",
+    "Capital": "Ngerulmud",
+    "Wiki": "https://en.wikipedia.org/wiki/Palau"
+  },
+  "Paraguay":{
+    "Weight": "0",
+    "Capital": "Asunci�n",
+    "Wiki": "https://en.wikipedia.org/wiki/Paraguay"
+  },
+  "Qatar":{
+    "Weight": "0",
+    "Capital": "Doha",
+    "Wiki": "https://en.wikipedia.org/wiki/Qatar"
+  },
+  "Romania":{
+    "Weight": "0",
+    "Capital": "Bucharest",
+    "Wiki": "https://en.wikipedia.org/wiki/Romania"
+  },
+  "Serbia":{
+    "Weight": "0",
+    "Capital": "Belgrade",
+    "Wiki": "https://en.wikipedia.org/wiki/Serbia"
+  },
+  "Russia":{
+    "Weight": "0",
+    "Capital": "Moscow",
+    "Wiki": "https://en.wikipedia.org/wiki/Russia"
+  },
+  "Rwanda":{
+    "Weight": "0",
+    "Capital": "Kigali",
+    "Wiki": "https://en.wikipedia.org/wiki/Rwanda"
+  },
+  "Saudi Arabia":{
+    "Weight": "0",
+    "Capital": "Riyadh",
+    "Wiki": "https://en.wikipedia.org/wiki/Saudi_Arabia"
+  },
+  "The Soloman Islands":{
+    "Weight": "0",
+    "Capital": "Honiara",
+    "Wiki": "https://en.wikipedia.org/wiki/Solomon_Islands"
+  },
+  "The Seychelles":{
+    "Weight": "0",
+    "Capital": "Victoria",
+    "Wiki": "https://en.wikipedia.org/wiki/Seychelles"
+  },
+  "Sudan":{
+    "Weight": "0",
+    "Capital": "Khartoum",
+    "Wiki": "https://en.wikipedia.org/wiki/Sudan"
+  },
+  "Sweden":{
+    "Weight": "0",
+    "Capital": "Stockholm",
+    "Wiki": "https://en.wikipedia.org/wiki/Sweden"
+  },
+  "Singapore":{
+    "Weight": "0",
+    "Capital": "Singapore",
+    "Wiki": "https://en.wikipedia.org/wiki/Singapore"
+  },
+  "Slovenia":{
+    "Weight": "0",
+    "Capital": "Ljubljana",
+    "Wiki": "https://en.wikipedia.org/wiki/Slovenia"
+  },
+  "Slovakia":{
+    "Weight": "0",
+    "Capital": "Bratislava",
+    "Wiki": "https://en.wikipedia.org/wiki/Slovakia"
+  },
+  "San Marino":{
+    "Weight": "0",
+    "Capital": "San Marino",
+    "Wiki": "https://en.wikipedia.org/wiki/San_Marino"
+  },
+  "Senegal":{
+    "Weight": "0",
+    "Capital": "Dakar",
+    "Wiki": "https://en.wikipedia.org/wiki/Senegal"
+  },
+  "Somalia":{
+    "Weight": "0",
+    "Capital": "Mogadishu",
+    "Wiki": "https://en.wikipedia.org/wiki/Somalia"
+  },
+  "Suriname":{
+    "Weight": "0",
+    "Capital": "Paramaribo",
+    "Wiki": "https://en.wikipedia.org/wiki/Suriname"
+  },
+  "Sao Tome and Principe":{
+    "Weight": "0",
+    "Capital": "S�o Tom�",
+    "Wiki": "https://en.wikipedia.org/wiki/S�o_Tom�_and_Pr�ncipe"
+  },
+  "El Savador":{
+    "Weight": "0",
+    "Capital": "San Salvador",
+    "Wiki": "https://en.wikipedia.org/wiki/El_Salvador"
+  },
+  "Syria":{
+    "Weight": "0",
+    "Capital": "Damascus",
+    "Wiki": "https://en.wikipedia.org/wiki/Syria"
+  },
+  "Swaziland":{
+    "Weight": "0",
+    "Capital": "Mbabane",
+    "Wiki": "https://en.wikipedia.org/wiki/Swaziland"
+  },
+  "Togo":{
+    "Weight": "0",
+    "Capital": "Lom�",
+    "Wiki": "https://en.wikipedia.org/wiki/Togo"
+  },
+  "Thailand":{
+    "Weight": "0",
+    "Capital": "Bangkok",
+    "Wiki": "https://en.wikipedia.org/wiki/Thailand"
+  },
+  "Tajikistan":{
+    "Weight": "0",
+    "Capital": "Dushanbe",
+    "Wiki": "https://en.wikipedia.org/wiki/Tajikistan"
+  },
+  "East Timor":{
+    "Weight": "0",
+    "Capital": "Dili",
+    "Wiki": "https://en.wikipedia.org/wiki/East_Timor"
+  },
+  "Turkmenistan":{
+    "Weight": "0",
+    "Capital": "Ashgabat",
+    "Wiki": "https://en.wikipedia.org/wiki/Turkmenistan"
+  },
+  "Tunisia":{
+    "Weight": "0",
+    "Capital": "Tunis",
+    "Wiki": "https://en.wikipedia.org/wiki/Tunisia"
+  },
+  "Tonga":{
+    "Weight": "0",
+    "Capital": "Nuku'alofa",
+    "Wiki": "https://en.wikipedia.org/wiki/Tonga"
+  },
+  "Turkey":{
+    "Weight": "0",
+    "Capital": "Ankara",
+    "Wiki": "https://en.wikipedia.org/wiki/Turkey"
+  },
+  "Tinidad and Tobago":{
+    "Weight": "0",
+    "Capital": "Port of Spain",
+    "Wiki": "https://en.wikipedia.org/wiki/Trinidad_and_Tobago"
+  },
+  "Tuvalu":{
+    "Weight": "0",
+    "Capital": "Funafuti",
+    "Wiki": "https://en.wikipedia.org/wiki/Tuvalu"
+  },
+  "The Republic of China":{
+    "Weight": "0",
+    "Capital": "Taipei",
+    "Wiki": "https://en.wikipedia.org/wiki/Taiwan"
+  },
+  "Tanzania":{
+    "Weight": "0",
+    "Capital": "Dodoma",
+    "Wiki": "https://en.wikipedia.org/wiki/Tanzania"
+  },
+  "Ukraine":{
+    "Weight": "0",
+    "Capital": "Kiev",
+    "Wiki": "https://en.wikipedia.org/wiki/Ukraine"
+  },
+  "Uganda":{
+    "Weight": "0",
+    "Capital": "Kampala",
+    "Wiki": "https://en.wikipedia.org/wiki/Uganda"
+  },
+  "The United States of America":{
+    "Weight": "0",
+    "Capital": "Washington",
+    "Wiki": "https://en.wikipedia.org/wiki/United_States"
+  },
+  "Uruguay":{
+    "Weight": "0",
+    "Capital": "Montevideo",
+    "Wiki": "https://en.wikipedia.org/wiki/Uruguay"
+  },
+  "Uzbekistan":{
+    "Weight": "0",
+    "Capital": "Tashkent",
+    "Wiki": "https://en.wikipedia.org/wiki/Uzbekistan"
+  },
+  "The Vatican City":{
+    "Weight": "0",
+    "Capital": "Vatican City",
+    "Wiki": "https://en.wikipedia.org/wiki/Vatican_City"
+  },
+  "Saint Vincent and the Grenadines":{
+    "Weight": "0",
+    "Capital": "Kingstown",
+    "Wiki": "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines"
+  },
+  "Venezuela":{
+    "Weight": "0",
+    "Capital": "Caracas",
+    "Wiki": "https://en.wikipedia.org/wiki/Venezuela"
+  },
+  "Vietnam":{
+    "Weight": "0",
+    "Capital": "Hanoi",
+    "Wiki": "https://en.wikipedia.org/wiki/Vietnam"
+  },
+  "Vanuatu":{
+    "Weight": "0",
+    "Capital": "Port Vila",
+    "Wiki": "https://en.wikipedia.org/wiki/Vanuatu"
+  },
+  "Samoa":{
+    "Weight": "0",
+    "Capital": "Apia",
+    "Wiki": "https://en.wikipedia.org/wiki/Samoa"
+  },
+  "Yemen":{
+    "Weight": "0",
+    "Capital": "Sana�",
+    "Wiki": "https://en.wikipedia.org/wiki/Yemen"
+  },
+  "South Africa":{
+    "Weight": "0",
+    "Capital": "Pretoria",
+    "Wiki": "https://en.wikipedia.org/wiki/South_Africa"
+  },
+  "Zambia":{
+    "Weight": "0",
+    "Capital": "Lusaka",
+    "Wiki": "https://en.wikipedia.org/wiki/Zambia"
+  },
+  "Zimbabwe":{
+    "Weight": "0",
+    "Capital": "Harare",
+    "Wiki": "https://en.wikipedia.org/wiki/Zimbabwe"
+  }
+}
+}
