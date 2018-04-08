@@ -30,6 +30,10 @@
         <activity android:name=".MostSearchedActivity" />
         <activity android:name=".tutorialActivity" />
         <activity android:name=".NoneActivity" />
+        <activity
+            android:name=".testtutorialActivity"
+            android:label="@string/title_activity_testtutorial"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -31,7 +31,7 @@ public class NoneActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, MainActivity.class));
         }
         if (v == buttonTut) {
-            startActivity(new Intent(this, tutorialActivity.class));
+            startActivity(new Intent(this, testtutorialActivity.class));
         }
     }
 }
