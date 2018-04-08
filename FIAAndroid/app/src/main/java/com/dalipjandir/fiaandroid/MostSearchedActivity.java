@@ -3,11 +3,15 @@ package com.dalipjandir.fiaandroid;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import android.net.Uri;
+import android.content.Intent;
 
 import com.google.firebase.database.*;
 import org.w3c.dom.Text;
@@ -21,6 +25,7 @@ public class MostSearchedActivity extends AppCompatActivity {
 
 
     private ListView listview;
+    private TextView textView;
     private ArrayList<String> details = new ArrayList<>();
 
     class Country{
@@ -45,7 +50,7 @@ public class MostSearchedActivity extends AppCompatActivity {
         listview = (ListView) findViewById(R.id.listView);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
         listview.setAdapter(arrayAdapter);
-
+        textView = (TextView) findViewById(R.id.textView2);
 
         myRef.child("Countries").orderByChild("Weight").startAt("2").addValueEventListener(new ValueEventListener() {
             @Override
@@ -57,9 +62,8 @@ public class MostSearchedActivity extends AppCompatActivity {
                     c1.wiki = childSnapshot.child("Wiki").getValue().toString();
                     listobj.add(c1);
                 }
-                TextView textView = (TextView) findViewById(R.id.textView2);
                 String si = Integer.toString(listobj.size());
-                textView.setText(si);
+                //textView.setText(si);
                 for(int i=listobj.size()-1; i >= 0; i--){
                     arrayAdapter.add(listobj.get(i).country);
                 }
@@ -71,7 +75,17 @@ public class MostSearchedActivity extends AppCompatActivity {
             }
         });
 
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String wikiLink = listobj.get(listobj.size()-1-position).wiki;
+                //textView.setText(listobj.get(listobj.size()-1-position).country);
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(wikiLink));
+                startActivity(browserIntent);
 
+
+            }
+        });
         //GETTING FIELDS OF A COUNTRY AND DISPLAYING IN LISTVIEW
 //        database = FirebaseDatabase.getInstance();
 //        myRef = database.getReference("Countries").child("Afghantistan");
