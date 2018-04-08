@@ -43,7 +43,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Getting Title Font
         Typeface titleTF = Typeface.createFromAsset(getAssets(), "font/Cookie-Regular.ttf");
         title.setTypeface(titleTF);
+
+        readflagData();
     }
+
+    public List<Flags> flags = new ArrayList<>();
+    private void readflagData(){
+        InputStream is = getResources().openRawResource(R.raw.flags);
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(is, Charset.forName("UTF-8"))
+        );
+        String line;
+        try {
+            while ((line = reader.readLine()) != null){
+                //split by ","
+                String[] token = line.split(",");
+
+                //Read the data
+                Flags flag = new Flags();
+                flag.setCountry(token[0]);
+                flag.setPngName(token[1]);
+                flag.setCapital(token[2]);
+                flag.setWiki(token[3]);
+                flag.setEdge_Pic(token[4]);
+                flags.add(flag);
+
+                Log.d("MyActivity", "Just created: " + flag);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     @Override
     public void onClick (View v){
