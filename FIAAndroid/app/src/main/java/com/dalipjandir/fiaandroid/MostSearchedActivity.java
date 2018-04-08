@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.ListView;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import com.google.firebase.database.*;
 import org.w3c.dom.Text;
@@ -18,8 +19,18 @@ public class MostSearchedActivity extends AppCompatActivity {
     private DatabaseReference myRef;
     String countryKey;
 
+
     private ListView listview;
     private ArrayList<String> details = new ArrayList<>();
+
+    class Country{
+        String country;
+        String capital;
+        String wiki;
+    }
+
+    Country c1;
+    LinkedList<Country> listobj = new LinkedList<Country>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +41,28 @@ public class MostSearchedActivity extends AppCompatActivity {
         //GET COUNTRIES with weight greater than or equal to 2
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
+
+        listview = (ListView) findViewById(R.id.listView);
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
+        listview.setAdapter(arrayAdapter);
+
+
         myRef.child("Countries").orderByChild("Weight").startAt("2").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot childSnapshot: dataSnapshot.getChildren()){
-                    countryKey = childSnapshot.getKey() + "; " + countryKey;
+                    c1 = new Country();
+                    c1.country = childSnapshot.getKey();
+                    c1.capital = childSnapshot.child("Capital").getValue().toString();
+                    c1.wiki = childSnapshot.child("Wiki").getValue().toString();
+                    listobj.add(c1);
                 }
                 TextView textView = (TextView) findViewById(R.id.textView2);
-                textView.setText(countryKey);
+                String si = Integer.toString(listobj.size());
+                textView.setText(si);
+                for(int i=listobj.size()-1; i >= 0; i--){
+                    arrayAdapter.add(listobj.get(i).country);
+                }
             }
 
             @Override
