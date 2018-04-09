@@ -1,6 +1,9 @@
 package com.dalipjandir.fiaandroid;
 
+import android.content.Context;
 import android.graphics.Bitmap;
+import org.opencv.android.OpenCVLoader;
+import org.opencv.android.Utils;
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
@@ -10,13 +13,22 @@ import java.util.*;
 
 public class Colour {
 
+    static {
+        if (!OpenCVLoader.initDebug()) {
+            // Handle initialization error
+        }
+    }
+
     static MatOfInt histSize = new MatOfInt(256);
     static final MatOfFloat histRange = new MatOfFloat(0f, 256f);
     static Size sz = new Size (550, 330);
 
-    public static ArrayList<Flags> getImage (String path){
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-        Mat image = Imgcodecs.imread(path);
+    public static ArrayList<Flags> getImage (Context context, Bitmap bitmap){
+        //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+
+        Mat image = new Mat(bitmap.getHeight(),bitmap.getWidth(), CvType.CV_8UC1);
+        Utils.bitmapToMat(bitmap, image);
+
 
         Imgproc.resize(image, image, sz);
 
@@ -38,11 +50,13 @@ public class Colour {
         Imgproc.calcHist(Arrays.asList(hsv_planes1.get(2)), new MatOfInt(), new Mat(), rHist, histSize, histRange, true);
         Core.normalize(rHist, rHist, 0, 1, Core.NORM_MINMAX, -1, new Mat());
 
-        return new ArrayList<>();
-        //return analyzeImage(bHist, gHist, rHist);
+        return analyzeImage(bHist, gHist, rHist);
     }
 
     private static ArrayList<Flags> analyzeImage(Mat bHist, Mat gHist, Mat rHist){
+        MatOfInt histSize = new MatOfInt(256);
+        final MatOfFloat histRange = new MatOfFloat(0f, 256f);
+        Size sz = new Size (550, 330);
 
         ArrayList<Flags> possible = new ArrayList<>();
 

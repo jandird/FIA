@@ -1,11 +1,14 @@
 package com.dalipjandir.fiaandroid;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 
 public class ViewController {
 
     private static Uri uncroppedImage;
-    private static String croppedImage;
+    private static Bitmap croppedImage;
     private static Flags [] results;
     private static Flags flagResult;
 
@@ -17,9 +20,9 @@ public class ViewController {
         return uncroppedImage;
     }
 
-    public static void runFinalImage(String image){
+    public static void runFinalImage(Context context, Bitmap image){
         croppedImage = image;
-        results = Forum.getImage(image);
+        results = Forum.getImage(context, image);
     }
 
     public static void setFlag(Flags flag){
@@ -31,7 +34,7 @@ public class ViewController {
     }
 
     public static Flags [] getResults(){
-        return Forum.getImage("temp");
+        return results;
     }
 
 }

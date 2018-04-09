@@ -46,23 +46,8 @@ public class CropActivity extends AppCompatActivity {
                 Bundle bundle = data.getExtras();
                 Bitmap bitmap = bundle.getParcelable("data");
 
-                Uri tempUri = getImageUri(getApplicationContext(), bitmap);
-                ViewController.runFinalImage(getRealPathFromURI(tempUri));
+                ViewController.runFinalImage(getApplicationContext(), bitmap);
             } catch (Exception e) {e.printStackTrace();}
         }
-    }
-
-    public Uri getImageUri(Context inContext, Bitmap inImage) {
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
-        return Uri.parse(path);
-    }
-
-    public String getRealPathFromURI(Uri uri) {
-        Cursor cursor = getContentResolver().query(uri, null, null, null, null);
-        cursor.moveToFirst();
-        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
-        return cursor.getString(idx);
     }
 }

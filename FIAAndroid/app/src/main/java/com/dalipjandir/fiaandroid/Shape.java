@@ -1,5 +1,9 @@
 package com.dalipjandir.fiaandroid;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import org.opencv.android.OpenCVLoader;
+import org.opencv.android.Utils;
 import org.opencv.core.*;
 import org.opencv.features2d.DescriptorExtractor;
 import org.opencv.features2d.DescriptorMatcher;
@@ -14,17 +18,29 @@ import java.util.List;
 
 public class Shape {
 
+    static {
+        if (!OpenCVLoader.initDebug()) {
+            // Handle initialization error
+        }
+    }
+
     static DescriptorExtractor surfDescriptorExtractor = DescriptorExtractor.create(DescriptorExtractor.ORB);
     static FeatureDetector fastFeatureDetector = FeatureDetector.create(FeatureDetector.ORB);
     static DescriptorMatcher flannDescriptorMatcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE);
 
     static Size sz = new Size(550, 330);
 
-    public static ArrayList<Flags> getImage(String path){
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-        Mat image1 = Imgcodecs.imread(path, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
+    static Context cont;
+
+    public static ArrayList<Flags> getImage(Context context, Bitmap bitmap){
+        cont = context;
+
+        Mat image1 = new Mat(bitmap.getHeight(),bitmap.getWidth(), CvType.CV_8UC1);
+        Utils.bitmapToMat(bitmap, image1);
 
         Imgproc.resize(image1, image1, sz);
+        Imgproc.cvtColor(image1, image1, Imgproc.COLOR_BGR2GRAY);
+
         ArrayList<MatOfKeyPoint> keypoints = new ArrayList<>();
         keypoints.add(new MatOfKeyPoint());
 
@@ -32,8 +48,7 @@ public class Shape {
         Mat descriptor = new Mat();
         surfDescriptorExtractor.compute(image1, keypoints.get(0), descriptor);
 
-        return new ArrayList<>();
-        //return analyzeImage(descriptor);
+        return analyzeImage(descriptor);
     }
 
     public static ArrayList<Flags> analyzeImage(Mat original){
@@ -43,7 +58,8 @@ public class Shape {
         ArrayList<Flags> temp = Flags_data.getFlags();
 
         for (Flags flag : temp){
-            Mat image1 = Imgcodecs.imread("res/" + flag.getPngName(), Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
+            Mat image1 = Utils.loadResource(cont, R.raw.ad);
+            Imgproc.cvtColor(image1, image1, Imgproc.COLOR_BGR2GRAY);
 
             Imgproc.resize(image1, image1, sz);
             ArrayList<MatOfKeyPoint> keypoints = new ArrayList<>();
