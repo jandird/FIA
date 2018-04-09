@@ -1,14 +1,10 @@
 package com.dalipjandir.fiaandroid;
 
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
 import android.widget.*;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +12,6 @@ import java.util.List;
 public class ResultsActivity extends AppCompatActivity implements View.OnClickListener {
 
     //Flag buttons and None button
-
     private Button buttonNone;
 
     //list of countries and their respective images to be displayed as the results to choose from
@@ -26,16 +21,13 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
     private ListView listview;
     List<ListObject> values;
 
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-
         //Creating Buttons
-
         buttonNone = (Button) findViewById(R.id.buttonF1);
 
         buttonNone.setOnClickListener(this);
@@ -54,11 +46,11 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         SimpleArrayAdapter adapter = new SimpleArrayAdapter(this, R.layout.rowlayout, values);
         listview.setAdapter(adapter);
 
-        //on click of country name NEEDS TO BE CHANGED TO GO TO A MORE INFO PAGE
+        //on click of country name
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent myIntent = new Intent(ResultsActivity.this, MainActivity.class);
+                Intent myIntent = new Intent(ResultsActivity.this, MoreInfo.class);
                 startActivity(myIntent);
             }
         });
@@ -68,7 +60,6 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         public void onClick (View v){
             if (v == buttonNone){
                 startActivity(new Intent(this, NoneActivity.class));
-                //System.out.println("buttonF1");
             }
     }
 
