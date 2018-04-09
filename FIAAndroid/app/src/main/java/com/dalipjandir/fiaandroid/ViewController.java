@@ -22,7 +22,7 @@ public class ViewController {
     }
 
     public static Flags [] getResults(){
-        return results;
+        return Forum.getImage("temp");
     }
 
 }
