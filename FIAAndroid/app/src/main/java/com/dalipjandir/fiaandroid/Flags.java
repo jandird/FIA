@@ -12,6 +12,7 @@ public class Flags {
     private String Capital;
     private String wiki;
     private String Edge_Pic;
+    private Integer index;
 
 
     public String getCountry() {
@@ -52,6 +53,14 @@ public class Flags {
 
     public void setEdge_Pic(String edge_Pic) {
         Edge_Pic = edge_Pic;
+    }
+
+    public Integer getIndex() {
+        return index;
+    }
+
+    public void setIndex(Integer index) {
+        this.index = index;
     }
 
     @Override

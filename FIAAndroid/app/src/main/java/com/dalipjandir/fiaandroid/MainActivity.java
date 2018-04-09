@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new InputStreamReader(is, Charset.forName("UTF-8"))
         );
         String line;
+        int i = 0;
         try {
             while ((line = reader.readLine()) != null){
                 //split by ","
@@ -80,6 +81,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 flag.setCapital(token[2]);
                 flag.setWiki(token[3]);
                 flag.setEdge_Pic(token[4]);
+                flag.setIndex(i);
+                i++;
                 Flags_data.flags.add(flag);
 
                 Log.d("MyActivity", "Just created: " + flag);
