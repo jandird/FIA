@@ -2,22 +2,20 @@ package com.dalipjandir.fiaandroid;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
-import android.widget.ListView;
+import android.widget.*;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import android.net.Uri;
 import android.content.Intent;
 
 import com.google.firebase.database.*;
-import org.w3c.dom.Text;
 
 
-public class MostSearchedActivity extends AppCompatActivity {
+public class MostSearchedActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Button mainMenu;
 
     private FirebaseDatabase database;
     private DatabaseReference myRef;
@@ -32,16 +30,19 @@ public class MostSearchedActivity extends AppCompatActivity {
         String country;
         String capital;
         String wiki;
+        String weight;
     }
 
     Country c1;
     LinkedList<Country> listobj = new LinkedList<Country>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_most_searched);
 
+        mainMenu = (Button) findViewById(R.id.mainmenu);
+        mainMenu.setOnClickListener(this);
 
         //GET COUNTRIES with weight greater than or equal to 2
         database = FirebaseDatabase.getInstance();
@@ -52,26 +53,30 @@ public class MostSearchedActivity extends AppCompatActivity {
         listview.setAdapter(arrayAdapter);
         textView = (TextView) findViewById(R.id.textView2);
 
-        myRef.child("Countries").orderByChild("Weight").startAt("2").addValueEventListener(new ValueEventListener() {
+        myRef.child("Countries").orderByChild("Weight").startAt("1").addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                arrayAdapter.clear();
+                listobj.clear();
                 for (DataSnapshot childSnapshot: dataSnapshot.getChildren()){
                     c1 = new Country();
                     c1.country = childSnapshot.getKey();
                     c1.capital = childSnapshot.child("Capital").getValue().toString();
                     c1.wiki = childSnapshot.child("Wiki").getValue().toString();
+                    c1.weight = childSnapshot.child("Weight").getValue().toString();
                     listobj.add(c1);
                 }
                 String si = Integer.toString(listobj.size());
                 //textView.setText(si);
                 for(int i=listobj.size()-1; i >= 0; i--){
-                    arrayAdapter.add(listobj.get(i).country);
+                    arrayAdapter.add(listobj.get(i).weight + ": " + listobj.get(i).country);
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                //arrayAdapter.clear();
             }
         });
 
@@ -147,4 +152,13 @@ public class MostSearchedActivity extends AppCompatActivity {
 //            }
 //        });
     }
+
+    @Override
+    public void onClick (View v){
+        if (v == mainMenu){
+            startActivity(new Intent(this, MainActivity.class));
+        }
+
+    }
+
 }
