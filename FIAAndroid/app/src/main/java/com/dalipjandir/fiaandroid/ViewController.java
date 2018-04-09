@@ -5,7 +5,7 @@ import android.net.Uri;
 public class ViewController {
 
     private static Uri uncroppedImage;
-    private static Uri croppedImage;
+    private static String croppedImage;
 
     public static void setUncroppedImage(Uri input){
         uncroppedImage = input;
@@ -15,7 +15,7 @@ public class ViewController {
         return uncroppedImage;
     }
 
-    public static void runFinalImage(Uri image){
+    public static void runFinalImage(String image){
         croppedImage = image;
     }
 
