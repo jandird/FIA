@@ -1,11 +1,20 @@
 package com.dalipjandir.fiaandroid;
+
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Typeface;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,13 +25,9 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import java.io.InputStreamReader;
-import java.net.SocketPermission;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
-import java.net.SocketPermission;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,6 +36,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonResults;
     private Button buttonMS;
     private Button buttonTutorial;
+
+    //gps stuff
+    private Button buttonGPS;
+    private TextView gpsResults;
+    private LocationManager locationManager;
+    private LocationListener locationListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +68,93 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         title.setTypeface(titleTF);
 
         readflagData();
+
+        //gps stuff
+        buttonGPS = (Button) findViewById(R.id.buttonGPS);
+        buttonGPS.setOnClickListener(this);
+        gpsResults = (TextView) findViewById(R.id.gpsResults);
+
+
+
+
+        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+
+
+                gpsResults.setText(getCountryName(location.getLatitude(),location.getLongitude()));
+
+            }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+
+                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivity(intent);
+
+            }
+        };
+
+
+        //getGPS();
+
     }
 
-  // public static List<Flags> flags = new ArrayList<>();
+    public String getCountryName(double lat, double lon) {
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        List<Address> addresses = null;
+        try {
+            addresses = geocoder.getFromLocation(lat, lon, 1);
+            if (addresses != null && !addresses.isEmpty()) {
+                return addresses.get(0).getCountryName();
+            }
+            return null;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode){
+            case 10:
+                getGPS();
+                break;
+            default:
+                break;
+        }
+    }
+
+    void getGPS(){
+        // first check for permissions
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.INTERNET}
+                        ,10);
+            }
+            return;
+        }
+        // this code won't execute IF permissions are not allowed, because in the line above there is return statement.
+                //noinspection MissingPermission
+                locationManager.requestLocationUpdates("gps", 5000, 0, locationListener);
+            }
+
+
+
+    // public static List<Flags> flags = new ArrayList<>();
 
 
 
@@ -107,6 +203,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v == buttonTutorial){
             startActivity(new Intent(this, testtutorialActivity.class));
+        }
+        if (v == buttonGPS){
+            getGPS();
         }
     }
 }
