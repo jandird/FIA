@@ -9,6 +9,7 @@ import android.widget.Button;
 public class MoreInfo extends AppCompatActivity implements View.OnClickListener{
 
     private Button mainMenu;
+    private Flags flagResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,9 @@ public class MoreInfo extends AppCompatActivity implements View.OnClickListener{
 
         mainMenu = (Button) findViewById(R.id.mainmenu);
         mainMenu.setOnClickListener(this);
+        flagResult = ViewController.getFlag();
     }
+
 
     @Override
     public void onClick (View v){

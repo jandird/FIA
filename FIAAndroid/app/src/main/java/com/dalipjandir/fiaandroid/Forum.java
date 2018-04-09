@@ -7,7 +7,7 @@ public class Forum {
 
     public static Flags[] getImage(String path){
         ArrayList<Flags> temp = Flags_data.getFlags();
-        Flags flags [] = {temp.get(0), temp.get(1), temp.get(2), temp.get(3), temp.get(4), temp.get(5)};
+        Flags flags [] = {temp.get(6), temp.get(1), temp.get(2), temp.get(3), temp.get(4), temp.get(5)};
 
         //sendFlags(path);
         return flags;

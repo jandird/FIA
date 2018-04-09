@@ -42,7 +42,7 @@ public class SimpleArrayAdapter extends ArrayAdapter<ListObject> {
 
         ListObject rowItem = (ListObject) values.get(position);
         holder.textView.setText(rowItem.getCountry());
-        holder.imageView.setImageResource(rowItem.getImage());
+        holder.imageView.setImageBitmap(rowItem.getImage());
 
         return convertView;
     }
