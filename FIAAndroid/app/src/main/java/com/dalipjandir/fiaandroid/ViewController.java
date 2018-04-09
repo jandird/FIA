@@ -6,6 +6,7 @@ public class ViewController {
 
     private static Uri uncroppedImage;
     private static String croppedImage;
+    private static Flags [] results;
 
     public static void setUncroppedImage(Uri input){
         uncroppedImage = input;
@@ -17,6 +18,11 @@ public class ViewController {
 
     public static void runFinalImage(String image){
         croppedImage = image;
+        results = Forum.getImage(image);
+    }
+
+    public static Flags [] getResults(){
+        return results;
     }
 
 }

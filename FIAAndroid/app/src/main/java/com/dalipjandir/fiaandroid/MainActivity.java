@@ -74,9 +74,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonGPS.setOnClickListener(this);
         gpsResults = (TextView) findViewById(R.id.gpsResults);
 
-
-
-
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override

@@ -16,7 +16,11 @@ import java.util.List;
  */
 
 public class Flags_data {
-    public static List<Flags> flags = new ArrayList<>();
+    private static ArrayList<Flags> flags = new ArrayList<>();
+
+    public static ArrayList<Flags> getFlags (){
+        return flags;
+    }
 
     public static void readflagData(Context context){
         InputStream is = context.getResources().openRawResource(R.raw.flags);

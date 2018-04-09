@@ -6,9 +6,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Colour {
 
@@ -40,14 +38,15 @@ public class Colour {
         Imgproc.calcHist(Arrays.asList(hsv_planes1.get(2)), new MatOfInt(), new Mat(), rHist, histSize, histRange, true);
         Core.normalize(rHist, rHist, 0, 1, Core.NORM_MINMAX, -1, new Mat());
 
-        return analyzeImage(bHist, gHist, rHist);
+        return new ArrayList<>();
+        //return analyzeImage(bHist, gHist, rHist);
     }
 
     private static ArrayList<Flags> analyzeImage(Mat bHist, Mat gHist, Mat rHist){
 
         ArrayList<Flags> possible = new ArrayList<>();
 
-        Flags [] temp = new Flags [10];
+        ArrayList<Flags> temp = Flags_data.getFlags();
 
         for (Flags flag : temp){
             Mat image = Imgcodecs.imread("res/" + flag.getPngName());
@@ -75,9 +74,28 @@ public class Colour {
             double val = (Imgproc.compareHist(bHist, bcHist, Imgproc.CV_COMP_CORREL) +
                     Imgproc.compareHist(gHist, gcHist, Imgproc.CV_COMP_CORREL) +
                     Imgproc.compareHist(rHist, rcHist, Imgproc.CV_COMP_CORREL));
+
+            if (val > 1){
+                flag.setColourVal(val);
+                possible.add(flag);
+            }
         }
-
-
-        return new ArrayList<>();
+        Collections.sort(possible, sort);
+        return possible;
     }
+
+    static Comparator<Flags> sort = new Comparator<Flags>() {
+        @Override
+        public int compare(Flags o1, Flags o2) {
+            if (o1.getShapeVal() > o2.getShapeVal()){
+                return 1;
+            }
+            else if (o1.getShapeVal() == o2.getShapeVal()){
+                return 0;
+            }
+            else {
+                return 1;
+            }
+        }
+    };
 }

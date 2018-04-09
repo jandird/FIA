@@ -8,12 +8,14 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Shape {
 
-    static FeatureDetector fastFeatureDetector = FeatureDetector.create(FeatureDetector.FAST);
     static DescriptorExtractor surfDescriptorExtractor = DescriptorExtractor.create(DescriptorExtractor.ORB);
+    static FeatureDetector fastFeatureDetector = FeatureDetector.create(FeatureDetector.ORB);
     static DescriptorMatcher flannDescriptorMatcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE);
 
     static Size sz = new Size(550, 330);
@@ -30,14 +32,16 @@ public class Shape {
         Mat descriptor = new Mat();
         surfDescriptorExtractor.compute(image1, keypoints.get(0), descriptor);
 
-        return analyzeImage(descriptor);
+        return new ArrayList<>();
+        //return analyzeImage(descriptor);
     }
 
     public static ArrayList<Flags> analyzeImage(Mat original){
 
         ArrayList<Flags> possible = new ArrayList<>();
 
-        Flags [] temp = new Flags [10];
+        ArrayList<Flags> temp = Flags_data.getFlags();
+
         for (Flags flag : temp){
             Mat image1 = Imgcodecs.imread("res/" + flag.getPngName(), Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 
@@ -65,7 +69,28 @@ public class Shape {
                     }
                 }
             }
+
+            if (filter.size() > 0){
+                flag.setShapeVal(filter.size());
+                possible.add(flag);
+            }
         }
-        return new ArrayList<Flags>();
+        Collections.sort(possible, sort);
+        return possible;
     }
+
+    static Comparator<Flags> sort = new Comparator<Flags>() {
+        @Override
+        public int compare(Flags o1, Flags o2) {
+            if (o1.getColourVal() > o2.getColourVal()){
+                return 1;
+            }
+            else if (o1.getColourVal() == o2.getColourVal()){
+                return 0;
+            }
+            else {
+                return 1;
+            }
+        }
+    };
 }

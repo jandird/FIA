@@ -13,6 +13,8 @@ public class Flags {
     private String wiki;
     private String Edge_Pic;
     private Integer index;
+    private double colourVal;
+    private int shapeVal;
 
 
     public String getCountry() {
@@ -61,6 +63,22 @@ public class Flags {
 
     public void setIndex(Integer index) {
         this.index = index;
+    }
+
+    public void setColourVal(double colourVal){
+        this.colourVal = colourVal;
+    }
+
+    public double getColourVal(){
+        return colourVal;
+    }
+
+    public void setShapeVal(int shapeVal){
+        this.shapeVal = shapeVal;
+    }
+
+    public int getShapeVal(){
+        return shapeVal;
     }
 
     @Override
