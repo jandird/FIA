@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         Flags_data.readflagData(getApplicationContext());
+        LocalStorage.createLocalFile(getApplicationContext());
 
         TextView title = (TextView) findViewById(R.id.title);
 
