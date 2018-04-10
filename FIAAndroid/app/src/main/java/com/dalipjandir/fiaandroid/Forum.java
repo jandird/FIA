@@ -6,6 +6,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Forum {
 
@@ -31,5 +32,12 @@ public class Forum {
             Log.d("FlagShape", flag.getCountry());
         }
         return new ArrayList<>();
+    }
+
+
+    //adding test flags to past results To be updated when forum is complete
+    public static void addPreviousResults(){
+        LocalStorage.deleteFile();
+        LocalStorage.addResult(1);
     }
 }

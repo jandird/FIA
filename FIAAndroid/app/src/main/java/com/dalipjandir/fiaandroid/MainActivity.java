@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, UploadActivity.class));
         }
         if (v == buttonResults){
-            startActivity(new Intent(this, ResultsActivity.class));
+            startActivity(new Intent(this, PreviousResultsActivity.class));
         }
         if (v == buttonMS){
             startActivity(new Intent(this, MostSearchedActivity.class));

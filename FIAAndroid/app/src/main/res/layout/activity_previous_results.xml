@@ -5,7 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.dalipjandir.fiaandroid.PreviousResultsActivity">
+        tools:context="com.dalipjandir.fiaandroid.PreviousResultsActivity"
+        android:background="@drawable/mainback">
 
     <TextView
             android:id="@+id/textView3"
@@ -19,7 +20,7 @@
             android:fontFamily="cursive"
             android:text="Previous Results"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.521"
@@ -42,7 +43,7 @@
         <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:id="@+id/textView"/>
 
         <ListView

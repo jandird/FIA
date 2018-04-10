@@ -35,7 +35,6 @@ public class LocalStorage {
         result = new File(path, "LocalResult.txt");
 
 
-
     }
 
     //input the index of the flag and it will add the index to the local file
