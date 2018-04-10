@@ -1,6 +1,7 @@
 package com.dalipjandir.fiaandroid;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -22,37 +23,26 @@ import java.util.List;
 
 public class LocalStorage {
 
-    public static List<Integer> LocalResult = new ArrayList<>();
+    //public static List<Integer> LocalResult = new ArrayList<>();
     public static File result;
 
 
     public static void createLocalFile(Context context) {
-/*        String filename = "localResult";
-        String fileContents = "Hello world";
-        FileOutputStream outputStreamStream;*/
+
         File path = context.getFilesDir();
-
         result = new File(path, "LocalResult.txt");
-
-
     }
 
     //input the index of the flag and it will add the index to the local file
     public static void addResult(int index) {
         try {
-            //List<Flags> flags = readAll();
-            //flags.add(Flags_data.getFlags().get(index));
+
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(result, true)));
-          /*  for(int i = 0; i < flags.size();i++) {
-                String temp = String.valueOf(flags.get(i).getIndex()) + "\n";
-                stream.write(temp.getBytes());
-            }*/
+
             String temp = String.valueOf(index) + "\n";
             out.write(temp);
             out.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -60,8 +50,8 @@ public class LocalStorage {
 
     // return a list of flags from the local file
     public static List<Flags> readAll() {
+        List<Integer> LocalResult = new ArrayList<>();
         List<Flags> flags = new ArrayList<>();
-
 
         FileInputStream in = null;
         try {
@@ -82,9 +72,18 @@ public class LocalStorage {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i < LocalResult.size(); i++)
-            flags.add(Flags_data.getFlags().get(LocalResult.get(i)));
-     //   Collections.reverse(flags);
+        ArrayList<Flags> temp = Flags_data.getFlags();
+        for (int i = 0; i < LocalResult.size(); i++){
+            for (Flags flag : temp){
+                int match = LocalResult.get(i);
+                if (flag.getIndex() == match){
+                    Log.d("Read", ""+flag.getIndex());
+                    flags.add(flag);
+                    break;
+                }
+            }
+        }
+        //   Collections.reverse(flags);
         return flags;
     }
 

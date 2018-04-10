@@ -30,18 +30,16 @@ public class PreviousResultsActivity extends AppCompatActivity implements View.O
 
         mainMenu = (Button) findViewById(R.id.mainmenu);
         mainMenu.setOnClickListener(this);
-        Forum.addPreviousResults();
         prevResults = LocalStorage.readAll();
         Log.i("testing", "onCreate: " + prevResults.size());
 
         TextView textView = (TextView) findViewById(R.id.textView);
         values = new ArrayList<ListObject>();
-        for (int i = 0; i < prevResults.size()-1; i++) {
+        for (int i = prevResults.size()-1; i >= 0 ; i--) {
             ListObject item = new ListObject();
             item.setCountry(prevResults.get(i).getCountry());
             String flagFile = prevResults.get(i).getPngName();
             InputStream in = this.getResources().openRawResource(this.getResources().getIdentifier(flagFile,"raw", this.getPackageName()));
-            //InputStream imageStream = this.getResources().openRawResource(R.raw.ad);
             Bitmap bitmap = BitmapFactory.decodeStream(in);
             item.setImage(bitmap);
             values.add(item);

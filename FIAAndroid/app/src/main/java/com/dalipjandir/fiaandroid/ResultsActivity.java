@@ -22,10 +22,8 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
     //list of countries and their respective images to be displayed as the results to choose from
     //public final int[] images = new int[]{getResources().openRawResource(R.raw.ad), R.drawable.can, R.drawable.can, R.drawable.can, R.drawable.can};
 
-
     private ListView listview;
     List<ListObject> values;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +34,6 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         buttonNone = (Button) findViewById(R.id.buttonF1);
 
         buttonNone.setOnClickListener(this);
-
-
 
         TextView textView = (TextView) findViewById(R.id.textView);
         values = new ArrayList<ListObject>();
@@ -62,7 +58,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ViewController.setFlag(flags[position]);
+                ViewController.setFinalFlag(flags[position]);
                 Intent myIntent = new Intent(ResultsActivity.this, MoreInfoActivity.class);
                 startActivity(myIntent);
             }

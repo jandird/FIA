@@ -78,7 +78,9 @@ public class Shape {
             ArrayList<MatOfDMatch> matches = new ArrayList<>();
             matches.add(new MatOfDMatch());
 
-            flannDescriptorMatcher.match(original, descriptor, matches.get(0));
+            if (keypoints.get(0).size().height > 0){
+                flannDescriptorMatcher.match(original, descriptor, matches.get(0));
+            }
 
             List<DMatch> match = matches.get(0).toList();
             ArrayList<DMatch> filter = new ArrayList<>();
@@ -96,22 +98,8 @@ public class Shape {
                 possible.add(flag);
             }
         }
-        Collections.sort(possible, sort);
         return possible;
     }
 
-    static Comparator<Flags> sort = new Comparator<Flags>() {
-        @Override
-        public int compare(Flags o1, Flags o2) {
-            if (o1.getColourVal() > o2.getColourVal()){
-                return 1;
-            }
-            else if (o1.getColourVal() == o2.getColourVal()){
-                return 0;
-            }
-            else {
-                return 1;
-            }
-        }
-    };
+
 }

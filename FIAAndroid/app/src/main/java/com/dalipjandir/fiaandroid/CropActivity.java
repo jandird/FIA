@@ -26,18 +26,17 @@ public class CropActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crop);
 
-        Intent intent = new Intent("com.android.camera.action.CROP");
-        intent.setDataAndType(ViewController.getUncroppedImage(),"image/*");
+        Intent CropIntent = new Intent("com.android.camera.action.CROP");
+        CropIntent.setDataAndType(ViewController.getUncroppedImage(),"image/*");
 
-        intent.putExtra("outputX", 550);
-        intent.putExtra("outputY", 330);
-        intent.putExtra("scaleUpIfNeeded", true);
-        intent.putExtra("scale", "true");
-        intent.putExtra("return-data", false);
-        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, ViewController.getUncroppedImage());
+        CropIntent.putExtra("crop","true");
+        CropIntent.putExtra("outputX", 550);
+        CropIntent.putExtra("outputY",330);
+        CropIntent.putExtra("scaleUpIfNeeded",true);
+        CropIntent.putExtra("return-data",true);
+        CropIntent.putExtra(MediaStore.EXTRA_OUTPUT, ViewController.getUncroppedImage());
 
-        startActivityForResult(intent, REQUEST_CROP_ICON);
+        startActivityForResult(CropIntent, REQUEST_CROP_ICON);
     }
 
     @Override
@@ -46,8 +45,8 @@ public class CropActivity extends AppCompatActivity {
             try {
                 Bundle bundle = data.getExtras();
                 Bitmap bitmap = bundle.getParcelable("data");
-
                 ViewController.runFinalImage(getApplicationContext(), bitmap);
+                startActivity(new Intent(this, ResultsActivity.class));
             } catch (Exception e) {e.printStackTrace();}
         }
     }

@@ -21,6 +21,7 @@ public class ViewController {
     private static FirebaseDatabase database;
     private static DatabaseReference myRef;
     private static int count;
+    private static double longi, latti;
 
 
     public static void setUncroppedImage(Uri input){
@@ -33,11 +34,12 @@ public class ViewController {
 
     public static void runFinalImage(Context context, Bitmap image){
         croppedImage = image;
-        results = Forum.getImage(context, image);
+        results = Forum.getImage(context, image, longi, latti);
     }
 
     //set flag for result including update to database
-    public static void setFlag(Flags flag){
+    public static void setFinalFlag(Flags flag){
+        Forum.addPreviousResults(flag.getIndex());
         flagResult = flag;
         count = 0;
         database = FirebaseDatabase.getInstance();
@@ -62,15 +64,17 @@ public class ViewController {
         flagResult = flag;
     }
 
-
     public static Flags getFlag(){
         return flagResult;
     }
 
     public static Flags [] getResults(){
-        ArrayList<Flags> temp = Flags_data.getFlags();
-        Flags flags [] = {temp.get(6), temp.get(1), temp.get(2), temp.get(3), temp.get(4), temp.get(5)};
-        return  flags;
+        return results;
+    }
+
+    public static void setLongLat (double lon, double lat){
+        longi = lon;
+        latti = lat;
     }
 
 }
