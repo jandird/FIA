@@ -49,8 +49,8 @@ public class PreviousResultsActivity extends AppCompatActivity implements View.O
 
         listview = (ListView) findViewById(R.id.list);
         listview.setItemsCanFocus(false);
-        SimpleArrayAdapter adapter = new SimpleArrayAdapter(this, R.layout.rowlayout, values);
-        listview.setAdapter(adapter);
+        SimpleArrayAdapter adapter2 = new SimpleArrayAdapter(this, R.layout.rowlayout, values);
+        listview.setAdapter(adapter2);
 
         //on click of country name
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {

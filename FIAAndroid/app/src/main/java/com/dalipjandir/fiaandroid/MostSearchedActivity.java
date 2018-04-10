@@ -50,6 +50,8 @@ public class MostSearchedActivity extends AppCompatActivity implements View.OnCl
 
         listview = (ListView) findViewById(R.id.listView);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
+        arrayAdapter.clear();
+        listobj.clear();
         listview.setAdapter(arrayAdapter);
         textView = (TextView) findViewById(R.id.textView2);
 
@@ -76,7 +78,7 @@ public class MostSearchedActivity extends AppCompatActivity implements View.OnCl
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                //arrayAdapter.clear();
+                arrayAdapter.clear();
             }
         });
 
