@@ -48,6 +48,7 @@ public class ViewController {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.i("test", "setFlag: " + dataSnapshot.getValue());
+                count = Integer.parseInt(dataSnapshot.getValue().toString());
                 count++;
                 myRef.child("Countries").child(flagResult.getCountry()).child("Weight").setValue(Integer.toString(count));
 

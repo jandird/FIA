@@ -54,7 +54,7 @@ public class PreviousResultsActivity extends AppCompatActivity implements View.O
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ViewController.setPrevResultFlag(prevResults.get(position));
+                ViewController.setPrevResultFlag(prevResults.get(prevResults.size() - position - 1));
                 Intent myIntent = new Intent(PreviousResultsActivity.this, MoreInfoActivity.class);
                 startActivity(myIntent);
             }
