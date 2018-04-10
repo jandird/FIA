@@ -3,7 +3,6 @@ package com.dalipjandir.fiaandroid;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,9 +13,10 @@ import android.widget.TextView;
 
 import java.io.InputStream;
 
-public class MoreInfo extends AppCompatActivity implements View.OnClickListener{
+public class MoreInfoActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button mainMenu;
+    private Button prevResults;
     private Flags flagResult;
 
     @Override
@@ -26,6 +26,10 @@ public class MoreInfo extends AppCompatActivity implements View.OnClickListener{
 
         mainMenu = (Button) findViewById(R.id.mainmenu);
         mainMenu.setOnClickListener(this);
+
+        prevResults = (Button) findViewById(R.id.prevResults);
+        prevResults.setOnClickListener(this);
+
         flagResult = ViewController.getFlag();
 
         TextView countryView = (TextView) findViewById(R.id.country);
@@ -49,16 +53,16 @@ public class MoreInfo extends AppCompatActivity implements View.OnClickListener{
                 startActivity(myWebLink);
             }
         });
-
-
-
     }
-
 
     @Override
     public void onClick (View v){
         if (v == mainMenu){
             startActivity(new Intent(this, MainActivity.class));
+        }
+
+        if (v == prevResults){
+            startActivity(new Intent(this, PreviousResultsActivity.class));
         }
 
     }

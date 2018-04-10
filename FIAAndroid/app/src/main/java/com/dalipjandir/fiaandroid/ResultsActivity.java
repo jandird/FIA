@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
@@ -64,7 +63,7 @@ public class ResultsActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ViewController.setFlag(flags[position]);
-                Intent myIntent = new Intent(ResultsActivity.this, MoreInfo.class);
+                Intent myIntent = new Intent(ResultsActivity.this, MoreInfoActivity.class);
                 startActivity(myIntent);
             }
         });

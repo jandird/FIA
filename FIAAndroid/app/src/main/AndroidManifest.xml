@@ -38,7 +38,9 @@
                 android:name=".testtutorialActivity"
                 android:label="@string/title_activity_testtutorial"
                 android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".MoreInfo">
+        <activity android:name=".MoreInfoActivity">
+        </activity>
+        <activity android:name=".PreviousResultsActivity">
         </activity>
     </application>
 

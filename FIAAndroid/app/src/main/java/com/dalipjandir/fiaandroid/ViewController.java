@@ -17,6 +17,7 @@ public class ViewController {
     private static Bitmap croppedImage;
     private static Flags [] results;
     private static Flags flagResult;
+    private static Flags pastResultsFlag; //flag used in previous results when to go to more info without updating the online database
     private static FirebaseDatabase database;
     private static DatabaseReference myRef;
     private static int count;
@@ -35,6 +36,7 @@ public class ViewController {
         results = Forum.getImage(context, image);
     }
 
+    //set flag for result including update to database
     public static void setFlag(Flags flag){
         flagResult = flag;
         count = 0;
@@ -54,7 +56,6 @@ public class ViewController {
 
             }
         });
-        Log.i("test2","test: " + count);
     }
 
     public static Flags getFlag(){
