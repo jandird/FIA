@@ -47,7 +47,10 @@ public class Shape {
         Mat descriptor = new Mat();
         surfDescriptorExtractor.compute(image1, keypoints.get(0), descriptor);
 
-        return analyzeImage(context, descriptor);
+        if (keypoints.get(0).size().height > 0){
+            return analyzeImage(context, descriptor);
+        }
+        return new ArrayList<>();
     }
 
     public static ArrayList<Flags> analyzeImage(Context cont, Mat original){
