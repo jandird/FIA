@@ -23,12 +23,12 @@ public class Forum {
 
     private static ArrayList<Flags> sendFlags(Context context, Bitmap bitmap){
 
-        return analyzeResults(Shape.getImage(context, bitmap), Colour.getImage(context, bitmap));
+        return analyzeResults(Colour.getImage(context, bitmap), Colour.getImage(context, bitmap));
     }
 
     private static ArrayList<Flags> analyzeResults(ArrayList<Flags> shape, ArrayList<Flags> colour){
 
-        Log.d("FlagShape", ""+colour.size());
+        Log.d("FlagShape", ""+shape.size());
         for (Flags flag : colour){
             Log.d("FlagShape", flag.getCountry());
         }

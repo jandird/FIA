@@ -1,4 +1,4 @@
-Country,Flag,Capital,Wiki,Edge_Pic
+﻿Country,Flag,Capital,Wiki,Edge_Pic
 Andorra,ad,Andorra le Vella,https://en.wikipedia.org/wiki/Andorra,cannyCountries/ad
 The United Arab Emirates,ae,Abu Dhabi,https://en.wikipedia.org/wiki/United_Arab_Emirates,cannyCountries/ae
 Afghanistan,af,Kabul,https://en.wikipedia.org/wiki/Afghanistan,cannyCountries/af
@@ -46,7 +46,7 @@ Germany,de,Berlin,https://en.wikipedia.org/wiki/Germany,cannyCountries/de
 Djibouti,dj,Djibouti,https://en.wikipedia.org/wiki/Djibouti,cannyCountries/dj
 Denmark,dk,Copenhagen,https://en.wikipedia.org/wiki/Denmark,cannyCountries/dk
 Dominica,dm,Roseau,https://en.wikipedia.org/wiki/Dominica,cannyCountries/dm
-The Dominican Republic,do,Santo Domingo,https://en.wikipedia.org/wiki/Dominican_Republic,cannyCountries/do
+The Dominican Republic,do1,Santo Domingo,https://en.wikipedia.org/wiki/Dominican_Republic,cannyCountries/do
 Algeria,dz,Algiers,https://en.wikipedia.org/wiki/Algeria,cannyCountries/dz
 Ecuador,ec,Quito,https://en.wikipedia.org/wiki/Ecuador,cannyCountries/ec
 Estonia,ee,Tallinn,https://en.wikipedia.org/wiki/Estonia,cannyCountries/ee

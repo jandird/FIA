@@ -26,17 +26,18 @@ public class CropActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crop);
 
-        Intent CropIntent = new Intent("com.android.camera.action.CROP");
-        CropIntent.setDataAndType(ViewController.getUncroppedImage(),"image/*");
+        Intent intent = new Intent("com.android.camera.action.CROP");
+        intent.setDataAndType(ViewController.getUncroppedImage(),"image/*");
 
-        CropIntent.putExtra("crop","true");
-        CropIntent.putExtra("outputX",180);
-        CropIntent.putExtra("outputY",180);
-        CropIntent.putExtra("scaleUpIfNeeded",true);
-        CropIntent.putExtra("return-data",true);
-        CropIntent.putExtra(MediaStore.EXTRA_OUTPUT, ViewController.getUncroppedImage());
+        intent.putExtra("outputX", 550);
+        intent.putExtra("outputY", 330);
+        intent.putExtra("scaleUpIfNeeded", true);
+        intent.putExtra("scale", "true");
+        intent.putExtra("return-data", false);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, ViewController.getUncroppedImage());
 
-        startActivityForResult(CropIntent, REQUEST_CROP_ICON);
+        startActivityForResult(intent, REQUEST_CROP_ICON);
     }
 
     @Override

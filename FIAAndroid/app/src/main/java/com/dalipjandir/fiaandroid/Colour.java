@@ -2,12 +2,15 @@ package com.dalipjandir.fiaandroid;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Log;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.android.Utils;
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
+import java.io.InputStream;
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -24,8 +27,6 @@ public class Colour {
     static Size sz = new Size (550, 330);
 
     public static ArrayList<Flags> getImage (Context context, Bitmap bitmap){
-        //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-
         Mat image = new Mat(bitmap.getHeight(),bitmap.getWidth(), CvType.CV_8UC1);
         Utils.bitmapToMat(bitmap, image);
 
@@ -50,20 +51,24 @@ public class Colour {
         Imgproc.calcHist(Arrays.asList(hsv_planes1.get(2)), new MatOfInt(), new Mat(), rHist, histSize, histRange, true);
         Core.normalize(rHist, rHist, 0, 1, Core.NORM_MINMAX, -1, new Mat());
 
-        return analyzeImage(bHist, gHist, rHist);
+        return analyzeImage(context, bHist, gHist, rHist);
     }
 
-    private static ArrayList<Flags> analyzeImage(Mat bHist, Mat gHist, Mat rHist){
-        MatOfInt histSize = new MatOfInt(256);
-        final MatOfFloat histRange = new MatOfFloat(0f, 256f);
-        Size sz = new Size (550, 330);
+    private static ArrayList<Flags> analyzeImage(Context cont, Mat bHist, Mat gHist, Mat rHist){
 
         ArrayList<Flags> possible = new ArrayList<>();
 
         ArrayList<Flags> temp = Flags_data.getFlags();
+        temp.remove(0);
 
         for (Flags flag : temp){
-            Mat image = Imgcodecs.imread("res/" + flag.getPngName());
+            String flagFile = flag.getPngName();
+            Log.d("Colour", flagFile);
+            InputStream in = cont.getResources().openRawResource(cont.getResources().getIdentifier(flagFile,"raw", cont.getPackageName()));
+            Bitmap bitmap = BitmapFactory.decodeStream(in);
+
+            Mat image = new Mat(bitmap.getHeight(),bitmap.getWidth(), CvType.CV_8UC1);
+            Utils.bitmapToMat(bitmap, image);
 
             Imgproc.resize(image, image, sz);
 
@@ -89,7 +94,7 @@ public class Colour {
                     Imgproc.compareHist(gHist, gcHist, Imgproc.CV_COMP_CORREL) +
                     Imgproc.compareHist(rHist, rcHist, Imgproc.CV_COMP_CORREL));
 
-            if (val > 1){
+            if (val > 0){
                 flag.setColourVal(val);
                 possible.add(flag);
             }
