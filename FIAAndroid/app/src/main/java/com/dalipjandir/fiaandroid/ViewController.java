@@ -9,6 +9,8 @@ import android.util.Log;
 import com.google.firebase.database.*;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class ViewController {
 
     private static Uri uncroppedImage;
@@ -60,7 +62,9 @@ public class ViewController {
     }
 
     public static Flags [] getResults(){
-        return results;
+        ArrayList<Flags> temp = Flags_data.getFlags();
+        Flags flags [] = {temp.get(6), temp.get(1), temp.get(2), temp.get(3), temp.get(4), temp.get(5)};
+        return  flags;
     }
 
 }

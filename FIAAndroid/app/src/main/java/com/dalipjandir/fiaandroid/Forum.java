@@ -10,11 +10,9 @@ import java.util.Collections;
 public class Forum {
 
     public static Flags[] getImage(Context context, Bitmap bitmap){
-        ArrayList<Flags> temp = Flags_data.getFlags();
-        Flags flags [] = {temp.get(6), temp.get(1), temp.get(2), temp.get(3), temp.get(4), temp.get(5)};
-
+        Flags flag [] = new Flags[6];
         sendFlags(context, bitmap);
-        return flags;
+        return flag;
     }
 
     public static void getPreviousResults (){
